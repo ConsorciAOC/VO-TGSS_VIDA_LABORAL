@@ -59,6 +59,8 @@ Consulta d'un període de la vida laboral dels darrers 5 anys.
 
 ### 3.2.2	Petició – dades específiques
 
+![Dades especifiques](https://github.com/ConsorciAOC/VO-TGSS_VIDA_LABORAL/blob/main/images/3%202%202%20Petici%C3%B3%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
+
 | _Element_ | _Descripció_ |
 | --- | --- |
 | /peticioConsultaVidaLaboral/dataInici | Data d’inici. No pot ser anterior a 5 anys des de la data de la consulta. |
@@ -67,6 +69,8 @@ Consulta d'un període de la vida laboral dels darrers 5 anys.
 >El període màxim de consulta dins dels darrers 5 anys serà d'un any com a màxim.
 
 ### 3.2.3	Resposta – dades específiques
+
+![Dades especifiques](https://github.com/ConsorciAOC/VO-TGSS_VIDA_LABORAL/blob/main/images/3%202%203%20Resposta%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
 | _Element_ | _Descripció_ |
 | --- | --- |
@@ -204,6 +208,8 @@ Consulta dels números d’afiliació.
 | //DatosGenericos/Titular/Documentacion | Documentació. |
 
 ### 3.3.2	Resposta – dades específiques
+
+![Dades escifiques](https://github.com/ConsorciAOC/VO-TGSS_VIDA_LABORAL/blob/main/images/3%203%202%20Resposta%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
 | _Element_ | _Descripció_ |
 | --- | --- |
