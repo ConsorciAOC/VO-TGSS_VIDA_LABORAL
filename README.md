@@ -29,7 +29,7 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 >L’emissor de les dades requereix que s’informin les dades del funcionari que realitza la consulta. Així, cal informar els següents camps de l’element Funcionario del bloc de dades genèriques:
 > */Peticion/Funcionario/NombreCompletoFuncionario,
 > /Peticion/Funcionario/NifFuncionario,
-> //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NombreCompletoFuncionario  i
+> //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NombreCompletoFuncionario
 > //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NifFuncionario*
 
 ## 3.1	Consulta de vida laboral del darrer any (VIDA_LABORAL)
@@ -64,9 +64,9 @@ Consulta d'un període de la vida laboral dels darrers 5 anys.
 | _Element_ | _Descripció_ |
 | --- | --- |
 | /peticioConsultaVidaLaboral/dataInici | Data d’inici. No pot ser anterior a 5 anys des de la data de la consulta. |
-| /peticioConsultaVidaLaboral/dataFi | Data de fi. No pot ser superior a un any a partir de la dataInici. |
+| /peticioConsultaVidaLaboral/dataFi | Data de fi. |
 
->El període màxim de consulta dins dels darrers 5 anys serà d'un any com a màxim.
+
 
 ### 3.2.3	Resposta – dades específiques
 
@@ -76,11 +76,10 @@ Consulta d'un període de la vida laboral dels darrers 5 anys.
 | --- | --- |
 | respostaConsultaVidaLaboral/resposta | Bloc de dades corresponent a la resposta a la consulta. |
 | //resposta/consulta/dataInici | Dada des de la que s’ha realitzat la consulta. |
-| //resposta/consulta/dataFi | Dada fins la que s’ha realitzat la consulta. |
-| //resposta/consulta/dataFi | NO_CANVIS_POSTERIORS i CANVIS_POSTERIORS |
+| //resposta/consulta/dataFi | Dada fins la que s’ha realitzat la consulta.<br/> <ul><li>NO_CANVIS_POSTERIORS</li><li>CANVIS_POSTERIORS</li></ul>|
 | //resposta/vidaLaboral | Bloc de dades corresponent a les dades de la vida laboral. |
-| //vidaLaboral/numeroSituacions | Númerodesituacionsretornadespelperíodeconsultat. |
-| //vidaLaboral/numerosAfiliacio/numeroAfiliacio | Número de situacions retornades pel període consultat. |
+| //vidaLaboral/numeroSituacions | Número de situacions retornades pel període consultat. |
+| //vidaLaboral/numerosAfiliacio/numeroAfiliacio | Número d’afiliació del titular consultat (fins a 10).  |
 | //vidaLaboral/dataNaixement | Data de naixement. |
 | //vidaLaboral/transferenciaDretsCEE | Indicador de transferència dels drets a països de la Unió Europea (S / N). En cas afirmatiu indica: *“Los días en situación de alta que constan en el presente informe únicamente son computables para el acceso a la prestación económica de incapacidad permanente derivada de contingencias comunes, por haberse transferido al sistema de previsión del personal de las Comunidades Europeas las fracciones de cuota destinadas a sufragar las prestaciones de jubilación y muerte y supervivencia, derivadas de contingencias comunes.”* |
 | //vidaLaboral/resum | Bloc de dades corresponent al resum dels dies cotitzats en el període consultat. |
@@ -95,7 +94,7 @@ Consulta d'un període de la vida laboral dels darrers 5 anys.
 | //vidaLaboral/resum/pluriocupacio/anysAlta | Anys d’alta en el període consultat sense incloure els anys de pluriocupació o pluriactivitat. |
 | //vidaLaboral/resum/pluriocupacio/mesosAlta | Mesos d’alta en el període consultat sense incloure els mesos de pluriocupació o pluriactivitat. |
 | //vidaLaboral/resum/pluriocupacio/diesAlta | Dies d’alta en el període consultat sense incloure els mesos de pluriocupació o pluriactivitat. |
-| //vidaLaboral/resum/situacions/situacio | Bloc de dades corresponent a una situació del titular consultat. |
+| //vidaLaboral/resum/situacions/situacio | Bloc de dades corresponent a una situació del titular consultat. </br> Si el règim ès AUTONOMOS: <ul><li> es retorna la província on exerceix el titular consultat.</li><li>es retorna la situació amb l'activitat econòmica que realitza l'autònom.</li></ul>|
 | //situació/numeroAfiliacio | Número d’afiliació de la Seguretat Social de la situació. |
 | //situació/regim | Règim de la Seguretat Social per la situació: GENERAL, REP.COMER., ARTISTAS, TAURINOS, AUTONOMOS, AGRARIO, MAR, CARBON, HOGAR i PROF. TAUR |
 | //situació/empresa | Raó social / nom de l’empresa. |
