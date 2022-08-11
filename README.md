@@ -1,14 +1,37 @@
 # VO-TGSS_VIDA_LABORAL
 
-# 1 Introducció
+## INDEX
+
+- [1. Introducció](#1)
+- [2. Transmissions de dades disponibles](#2)
+- [3. Missatgeria del servei](#3)
+   * [3.1 Consulta de vida laboral del darrer any (VIDA_LABORAL)](#3.1)
+        * [3.1.1 Petició – dades genèriques](#3.1.1)
+		* [3.1.2 Resposta – dades específiques](#3.1.2)
+   * [3.2 Consulta de vida laboral dels darrers 5 anys (VIDA_LABORAL5)](#3.2)
+        * [3.2.1 Petició – dades genèriques](#3.2.1)
+		* [3.2.2 Petició – dades específiques](#3.2.2)
+		* [3.2.3 Resposta – dades específiques](#3.2.3)
+   * [3.3 Consulta de números d’afiliació (NUMEROS_AFILIACIO)](#3.3)
+		* [3.3.1 Petició – dades genèriques](#3.3.1)
+		* [3.3.2 Resposta – dades específiques](#3.3.2)
+	- [4. Joc de proves](#4)
+
+
+
+
+# 1 Introducció <a name="1"></a>
 
 Aquest document detalla la missatgeria associada al servei de consulta d’informació de Vida Laboral de la Tesorería General de la Seguridad Social.
 
 Per poder realitzar la integració cal conèixer prèviament la següent documentació:
 
-* Document de Missatgeria Genèrica de la PCI del Consorci AOC.
+- [Document de Missatgeria Genèrica de la PCI del Consorci AOC.][PCI]
 
-# 2	Transmissions de dades disponibles
+[PCI]:https://github.com/ConsorciAOC/PCI
+
+
+# 2	Transmissions de dades disponibles <a name="2"></a>
 Les dades disponibles a través del servei són les que es presenten a continuació:
 
 Emissor: Tesoreria General de la Seguridad Social.
@@ -23,7 +46,7 @@ Producte: TGSS_Vida_Laboral
 
 Les modalitats disposen de versió imprimible del resultat de la consulta en format PDF. Per més detalls adreceu-vos a l’apartat *Extensions de missatgeria* del document de missatgeria genèrica.
 
-# 3	Missatgeria dels serveis
+# 3	Missatgeria del servei <a name="3"></a>
 A continuació es detalla la missatgeria corresponent al bloc de dades específiques de les modalitats de consum del producte.
 
 >L’emissor de les dades requereix que s’informin les dades del funcionari que realitza la consulta. Així, cal informar els següents camps de l’element Funcionario del bloc de dades genèriques:
@@ -32,32 +55,32 @@ A continuació es detalla la missatgeria corresponent al bloc de dades específi
 > //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NombreCompletoFuncionario
 > //SolicitudTransmision/DatosGenericos/Solicitante/Funcionario/NifFuncionario*
 
-## 3.1	Consulta de vida laboral del darrer any (VIDA_LABORAL)
+## 3.1	Consulta de vida laboral del darrer any (VIDA_LABORAL) <a name="3.1"></a>
 
 Consulta de vida laboral del darrer any des de la data de consulta. 
 
-### 3.1.1	Petició – dades genèriques
+### 3.1.1	Petició – dades genèriques <a name="3.1.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
 | //DatosGenericos/Titular/TipoDocumentacion | Tipus de documentació (DNI, NIE). |
 | //DatosGenericos/Titular/Documentacion | Documentació. |
 
-### 3.1.2	Resposta – dades específiques
+### 3.1.2	Resposta – dades específiques <a name="3.1.2"></a>
 
-Vegeu apartat 3.2.3 d’aquest mateix document.
+Vegeu [apartat 3.2.3] (#3.1.2) d’aquest mateix document.
 
-## 3.2	Consulta de vida laboral dels darrers 5 anys (VIDA_LABORAL5)
+## 3.2	Consulta de vida laboral dels darrers 5 anys (VIDA_LABORAL5) <a name="3.2"></a>
 Consulta d'un període de la vida laboral dels darrers 5 anys.
 
-### 3.2.1	Petició – dades genèriques
+### 3.2.1	Petició – dades genèriques <a name="3.2.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
 | //DatosGenericos/Titular/TipoDocumentacion | Tipus de documentació (DNI, NIE). |
 | //DatosGenericos/Titular/Documentacion | Documentació. |
 
-### 3.2.2	Petició – dades específiques
+### 3.2.2	Petició – dades específiques <a name="3.2.2"></a>
 
 ![Dades especifiques](https://github.com/ConsorciAOC/VO-TGSS_VIDA_LABORAL/blob/main/images/3%202%202%20Petici%C3%B3%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
@@ -68,7 +91,7 @@ Consulta d'un període de la vida laboral dels darrers 5 anys.
 
 
 
-### 3.2.3	Resposta – dades específiques
+### 3.2.3	Resposta – dades específiques <a name="3.2.3"></a>
 
 ![Dades especifiques](https://github.com/ConsorciAOC/VO-TGSS_VIDA_LABORAL/blob/main/images/3%202%203%20Resposta%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
@@ -196,17 +219,17 @@ Peculiaritats del sistema especial de fruites, hortalisses i conserves vegetals
 
 * La situació d’alta de forma simultània en dos o més Règims del citat sistema –pluriactivitat- sent una de les empreses del Sistema Especial de Fruites, Hortalisses i Conserves Vegetals, impedeix determinar si al número de dies calculats segons s’ha indicat en el paràgraf anterior se li han de restar dies per existir una superposició de períodes cotitzats. El càlcul definitiu es realitzarà en el moment en que s’efectuï una sol·licitud per a l’accés a una prestació econòmica del sistema de la Seguretat Social.
 
-## 3.3	Consulta de números d’afiliació (NUMEROS_AFILIACIO)
+## 3.3	Consulta de números d’afiliació (NUMEROS_AFILIACIO) <a name="3.3"></a>
 Consulta dels números d’afiliació.
 
-### 3.3.1	Petició – dades genèriques
+### 3.3.1	Petició – dades genèriques <a name="3.3.1"></a>
 
 | _Element_ | _Descripció_ |
 | --- | --- |
 | //DatosGenericos/Titular/TipoDocumentacion | Tipus de documentació (DNI, NIE). |
 | //DatosGenericos/Titular/Documentacion | Documentació. |
 
-### 3.3.2	Resposta – dades específiques
+### 3.3.2	Resposta – dades específiques <a name="3.3.2"></a>
 
 ![Dades escifiques](https://github.com/ConsorciAOC/VO-TGSS_VIDA_LABORAL/blob/main/images/3%203%202%20Resposta%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
@@ -216,3 +239,15 @@ Consulta dels números d’afiliació.
 | //resposta/numerosAfiliacio/numeroAfiliacio | Número d’afiliació (fins a un màxim de 10). |
 | respostaConsultaNumerosAfiliacio/resultat/codiResultat | Codi de resultat de la consulta: 0000: titular localitzat, 0001: titular no localitzat a la BBDD de la Seguretat Social, 0002: titular duplicat a la BBDD de la Seguretat Social, 0005: error realitzant la consulta, 0010: titular sense cap número d’afiliació i 0502: error realitzant la consulta. |
 | respostaConsultaNumerosAfiliacio/resultat/descripcio | Descripció del resultat. |
+
+
+# 4 Joc de proves <a name="4"></a>
+
+
+
+L&#39;emissor final publica els següent [joc de proves a l&#39;entorn de pre-producció][proves] 
+
+[proves]: https://administracionelectronica.gob.es/ctt/svd/descargas#.YvOZNXbP2Ul
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) En cas de tindre problemes per accedir als jocs de proves, si us plau, obre un tiquet a través del [formulari][form]
+
+[form]:https://www.aoc.cat/portal-suport/peticio-integradors/idservei/integracio/
