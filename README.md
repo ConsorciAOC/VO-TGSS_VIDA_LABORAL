@@ -15,7 +15,7 @@
    * [3.3 Consulta de números d’afiliació (NUMEROS_AFILIACIO)](#3.3)
 		* [3.3.1 Petició – dades genèriques](#3.3.1)
 		* [3.3.2 Resposta – dades específiques](#3.3.2)
-	- [4. Joc de proves](#4)
+- [4. Joc de proves](#4)
 
 
 
