@@ -119,18 +119,18 @@ Consulta d'un període de la vida laboral dels darrers 5 anys.
 | //vidaLaboral/resum/pluriocupacio/diesAlta | Dies d’alta en el període consultat sense incloure els mesos de pluriocupació o pluriactivitat. |
 | //vidaLaboral/resum/situacions/situacio | Bloc de dades corresponent a una situació del titular consultat. </br> Si el règim ès AUTONOMOS: <ul><li> es retorna la província on exerceix el titular consultat.</li><li>es retorna la situació amb l'activitat econòmica que realitza l'autònom.</li></ul>|
 | //situació/numeroAfiliacio | Número d’afiliació de la Seguretat Social de la situació. |
-| //situació/regim | Règim de la Seguretat Social per la situació: GENERAL, REP.COMER., ARTISTAS, TAURINOS, AUTONOMOS, AGRARIO, MAR, CARBON, HOGAR i PROF. TAUR |
+| //situació/regim | Règim de la Seguretat Social per la situació: <br><br>GENERAL, REP.COMER., ARTISTAS, TAURINOS, AUTONOMOS, AGRARIO, MAR, CARBON, HOGAR i PROF. TAUR |
 | //situació/empresa | Raó social / nom de l’empresa. |
 | //situació/codiCompteCotitzacio | Codi compte cotització de l’empresa. |
 | //situació/provincia | Província i codi compte cotització. Només es retorna si el codi de compte de cotització és: C.AJENA, C.PROPIA i si no s’especifica |
 | //situació/dataAlta | Data d’inici de l’activitat laboral. |
 | //situació/dataEfectes | Data a partir de la qual té efectes l’alta en ordre a causar dret, a les prestacions del sistema de Seguretat Social, llevat per les prestacions derivades d’accidents de treball i malalties professionals, atur y assistència sanitària derivada de malaltia comuna, maternitat i accident no laboral, en les quals la data d’efecte de l’alta coincideix, en qualsevol cas, amb la data d’alta. |
 | //situació/dataBaixa | Data de finalització de l’activitat laboral. |
-| //situació/contracteTreball | Identificador del contracte de treball. Per més detalls vegeu l’apartat 3.2.3.1 d’aquest document. |
+| //situació/contracteTreball | Identificador del contracte de treball. Per més detalls vegeu l’apartat [3.2.3.1](#3231-relació-de-contractes-de-treball) d’aquest document. |
 | //situació/contracteTempsParcial | Identificador del % de jornada per contractes a temps parcial. Identifica el percentatge que, sobre la jornada a temps complert establerta en el Conveni Col·lectiu d’aplicació o, en el seu defecte, sobre la jornada ordinària màxima legal, realitza o ha realitzat el treballador/a. |
-| //situació/grupCotitzacio | Grup de cotització. Per més detalls vegeu l’apartat 3.2.3.2 d’aquest document. |
-| //situació/diesAlta | Dies donat d’alta per la situació retornada. Per més detalls, vegeu l’apartat 3.2.3.3 d’aquest document. |
-| respostaConsultaVidaLaboral/resultat/codiResultat | Codi de resultat de la consulta: 0000: titular localitzat, 0001: titular no localitzat a la BBDD de la Seguretat Social, 0002: titular duplicat a la BBDD de la Seguretat Social, 0005: vida laboral amb massa situacions, 0502: error realitzant la consulta. |
+| //situació/grupCotitzacio | Grup de cotització. Per més detalls vegeu l’apartat [3.2.3.2](#3232-grups-de-cotització) d’aquest document. |
+| //situació/diesAlta | Dies donat d’alta per la situació retornada. Per més detalls, vegeu l’apartat [3.2.3.3](#3233-aclariment-dels-dies-dalta-duna-situació) d’aquest document. |
+| respostaConsultaVidaLaboral/resultat/codiResultat | Codi de resultat de la consulta: <br>0000: titular localitzat, <br>0001: titular no localitzat a la BBDD de la Seguretat Social, <br>0002: titular duplicat a la BBDD de la Seguretat Social, <br>0005: vida laboral amb massa situacions, <br>0502: error realitzant la consulta. |
 | respostaConsultaVidaLaboral/resultat/descripcio | Descripció del resultat. |
 
 #### 3.2.3.1	Relació de contractes de treball
