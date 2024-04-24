@@ -236,9 +236,22 @@ Consulta dels números d’afiliació.
 | _Element_ | _Descripció_ |
 | --- | --- |
 | respostaConsultaNumerosAfiliacio/resposta | Bloc de dades corresponent a la resposta a la consulta. |
-| //resposta/numerosAfiliacio/numeroAfiliacio | Número d’afiliació (fins a un màxim de 10). |
-| respostaConsultaNumerosAfiliacio/resultat/codiResultat | Codi de resultat de la consulta: 0000: titular localitzat, 0001: titular no localitzat a la BBDD de la Seguretat Social, 0002: titular duplicat a la BBDD de la Seguretat Social, 0005: error realitzant la consulta, 0010: titular sense cap número d’afiliació i 0502: error realitzant la consulta. |
+| //resposta/numerosAfiliacio/numeroAfiliacio | Número d’afiliació principal (inclòs si el titular no té vida laboral). Per més detalls vegeu l’apartat [3.3.2.1](#3321-informació-addicional-sobre-els-números-dafiliació) d’aquest document.|
+| respostaConsultaNumerosAfiliacio/resultat/codiResultat | Codi de resultat de la consulta: <br> 0000: titular localitzat, <br> 0001: titular no localitzat a la BBDD de la Seguretat Social, <br> 0002: titular duplicat a la BBDD de la Seguretat Social, <br> 0005: error realitzant la consulta, <br> 0010: titular sense cap número d’afiliació i <br> 0502: error realitzant la consulta. |
 | respostaConsultaNumerosAfiliacio/resultat/descripcio | Descripció del resultat. |
+
+#### 3.3.2.1	Informació addicional sobre els números d’afiliació <a name="3.3.2.1"></a>
+
+Un afiliat pot tenir més d'un nombre d'afiliació per diverses raons:
+1. Són dades d'un afiliat molt antic i originalment el sistema podia assignar un número d'afiliació per província on l'afiliat començava l'activitat.
+2. Per unificació de registres del Persones Físiques. Si es detecta que dos registres diferents del fitxer de persones físiques i són la mateixa persona, aquests dos registres s'unifiquen en un per conservar tota la informació del treballador. Això vol dir que s'inclouen els dos números d'afiliació dels dos registres a l'únic que quedarà al fitxer de persones física.
+3. Un afiliat que tingui més d'un nombre d'afiliació només pot tenir altes o fer noves altes al principal. A la resta de números d'afiliació només hi podrà haver situacions laborals tancades.
+4. L'afiliat estarà identificat al sistema per qualsevol dels seus números d'afiliació, ja que l'identifiquen, encara que només es pugui fer gestió d'altes amb el principal.
+
+ 
+![image](https://user-images.githubusercontent.com/32306731/137281698-9dfc2044-94f7-487f-a7d6-9a4e0707feb3.png) El servei retornarà sempre el número principal d'afiliació del titular consultat.
+
+
 
 
 # 4 Joc de proves <a name="4"></a>
