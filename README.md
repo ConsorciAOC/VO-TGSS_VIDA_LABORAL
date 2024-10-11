@@ -117,7 +117,7 @@ Consulta d'un període de la vida laboral dels darrers 5 anys.
 | //vidaLaboral/resum/pluriocupacio/anysAlta | Anys d’alta en el període consultat sense incloure els anys de pluriocupació o pluriactivitat. |
 | //vidaLaboral/resum/pluriocupacio/mesosAlta | Mesos d’alta en el període consultat sense incloure els mesos de pluriocupació o pluriactivitat. |
 | //vidaLaboral/resum/pluriocupacio/diesAlta | Dies d’alta en el període consultat sense incloure els mesos de pluriocupació o pluriactivitat. |
-| //vidaLaboral/resum/situacions/situacio | Bloc de dades corresponent a una situació del titular consultat. </br> Si el règim ès AUTONOMOS: <ul><li> es retorna la província on exerceix el titular consultat.</li><li>es retorna la situació amb l'activitat econòmica que realitza l'autònom.</li></ul>|
+| //vidaLaboral/resum/situacions/situacio | Bloc de dades corresponent a una situació del titular consultat. </br> Si el règim ès AUTONOMOS: <ul><li> es retorna la província on exerceix el titular consultat.</li><li>NO es retorna la situació amb l'activitat econòmica que realitza l'autònom.</li></ul>|
 | //situació/numeroAfiliacio | Número d’afiliació de la Seguretat Social de la situació. |
 | //situació/regim | Règim de la Seguretat Social per la situació: <br><br>GENERAL, REP.COMER., ARTISTAS, TAURINOS, AUTONOMOS, AGRARIO, MAR, CARBON, HOGAR i PROF. TAUR |
 | //situació/empresa | Raó social / nom de l’empresa. |
